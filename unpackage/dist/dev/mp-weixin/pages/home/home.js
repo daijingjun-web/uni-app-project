@@ -104,6 +104,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    mySearch: function() {
+      return __webpack_require__.e(/*! import() | components/my-search/my-search */ "components/my-search/my-search").then(__webpack_require__.bind(null, /*! @/components/my-search/my-search.vue */ 59))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -184,6 +207,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -209,8 +235,7 @@ var _default =
                   uni.$http.get('/api/public/v1/home/swiperdata'));case 2:_yield$uni$$http$get = _context.sent;res = _yield$uni$$http$get.data;if (!(
 
                 res.meta.status !== 200)) {_context.next = 6;break;}return _context.abrupt("return", uni.$showMsg());case 6:
-                _this.swiperList = res.message;
-                uni.$showMsg('成功');case 8:case "end":return _context.stop();}}}, _callee);}))();
+                _this.swiperList = res.message;case 7:case "end":return _context.stop();}}}, _callee);}))();
     },
     // 获取分类导航数据列表
     getNavList: function getNavList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _yield$uni$$http$get2, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
@@ -243,9 +268,13 @@ var _default =
                   });
                 });
                 _this3.floorList = res.message;case 8:case "end":return _context3.stop();}}}, _callee3);}))();
-    }
+    },
     // 
-  } };exports.default = _default;
+    gotoSearch: function gotoSearch() {
+      uni.navigateTo({
+        url: '/package1/search/search' });
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

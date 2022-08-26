@@ -3,5 +3,18 @@
     "projectname": "uni-shop",
     "setting": {
         "compileHotReLoad": false
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "package1/search/search",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
     }
 }
