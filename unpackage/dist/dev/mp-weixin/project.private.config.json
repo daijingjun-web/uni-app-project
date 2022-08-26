@@ -9,7 +9,7 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "package1/search/search",
+                    "pathName": "package1/goods_list/goods_list",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
