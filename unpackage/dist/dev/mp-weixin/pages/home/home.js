@@ -209,8 +209,7 @@ var _default =
                   uni.$http.get('/api/public/v1/home/swiperdata'));case 2:_yield$uni$$http$get = _context.sent;res = _yield$uni$$http$get.data;if (!(
 
                 res.meta.status !== 200)) {_context.next = 6;break;}return _context.abrupt("return", uni.$showMsg());case 6:
-                _this.swiperList = res.message;
-                uni.$showMsg('成功');case 8:case "end":return _context.stop();}}}, _callee);}))();
+                _this.swiperList = res.message;case 7:case "end":return _context.stop();}}}, _callee);}))();
     },
     // 获取分类导航数据列表
     getNavList: function getNavList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _yield$uni$$http$get2, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (

@@ -69,7 +69,6 @@
         // console.log(res);
         if (res.meta.status !== 200) return uni.$showMsg()
         this.swiperList = res.message
-        uni.$showMsg('成功')
       },
       // 获取分类导航数据列表
       async getNavList() {
