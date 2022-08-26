@@ -9,8 +9,8 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "package1/search/search",
-                    "query": "",
+                    "pathName": "package1/goods_detail/goods_detail",
+                    "query": "goods_id=395",
                     "launchMode": "default",
                     "scene": null
                 }
